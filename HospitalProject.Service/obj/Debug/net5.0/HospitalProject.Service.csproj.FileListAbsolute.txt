@@ -1,0 +1,15 @@
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\bin\Debug\net5.0\HospitalProject.Service.deps.json
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\bin\Debug\net5.0\HospitalProject.Service.dll
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\bin\Debug\net5.0\ref\HospitalProject.Service.dll
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\bin\Debug\net5.0\HospitalProject.Service.pdb
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\bin\Debug\net5.0\HospitalProject.Domain.dll
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\bin\Debug\net5.0\HospitalProject.Domain.pdb
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.csproj.AssemblyReference.cache
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.AssemblyInfo.cs
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.csproj.CopyComplete
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.dll
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\ref\HospitalProject.Service.dll
+C:\Users\dell\source\repos\HospitalProject.Api\HospitalProject.Service\obj\Debug\net5.0\HospitalProject.Service.pdb
