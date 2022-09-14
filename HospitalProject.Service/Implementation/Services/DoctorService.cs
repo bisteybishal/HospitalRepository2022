@@ -31,12 +31,19 @@ namespace HospitalProject.Service.Implementation.Services
             {
                 Name = x.Name,
                 Address = x.Address
-            }).AsQueryable();
+            }).AsQueryable(); 
+
         }
 
         public DoctorDto GetDoctor(int Id)
         {
-            throw new NotImplementedException();
+            var doctor = _doctorRepository.GetDoctorbyId(Id);
+            return new DoctorDto
+            {
+                Name = doctor.Name,
+                Address = doctor.Address
+            };
+
         }
     }
 }
