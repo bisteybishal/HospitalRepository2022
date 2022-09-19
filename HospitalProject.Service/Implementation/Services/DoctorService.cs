@@ -32,25 +32,21 @@ namespace HospitalProject.Service.Implementation.Services
 
         public IQueryable<DoctorDto> GetAll()
         {
-            var doctors = _doctorRepository.GetAllDoctor();
-            return doctors.Select(x => new DoctorDto
-            {
-                Name = x.Name,
-                Address = x.Address
-            }).AsQueryable();
+           throw new NotImplementedException();
         }
 
         public DoctorDto GetDoctor(int Id)
         {
-            var doctor = _doctorRepository.GetDoctorbyId(Id);
-            return new DoctorDto
-            {
-                Name = doctor.Name,
-                Address = doctor.Address
-            };
+            throw new NotImplementedException();
+
         }
 
         public void Update(DoctorDto doctorDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        Doctor IDoctorService.GetDoctor(int Id)
         {
             throw new NotImplementedException();
         }
