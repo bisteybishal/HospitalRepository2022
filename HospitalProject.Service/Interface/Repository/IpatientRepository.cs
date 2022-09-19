@@ -9,12 +9,10 @@ namespace HospitalProject.Service.Interface.Repository
 {
     public interface IpatientRepository
     {
-        IEnumerable<Patient> GetAllPatients();
+       IEnumerable<Patient> GetAll();
        Patient GetPatient(int patientId);
-        void Add(Patient entity);
-        void Update(Patient patient);
-        void Remove(int id);
-
-
+       void Add(Patient entity);
+       void Update(Patient patient);
+       void Remove(Patient patient);
     }
 }

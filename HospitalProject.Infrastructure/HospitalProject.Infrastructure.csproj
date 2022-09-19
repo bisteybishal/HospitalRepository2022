@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HospitalProject.Domain\HospitalProject.Domain.csproj" />
+    <ProjectReference Include="..\HospitalProject.Service\HospitalProject.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

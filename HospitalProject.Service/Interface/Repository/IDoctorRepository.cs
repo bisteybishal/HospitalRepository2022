@@ -1,4 +1,5 @@
 ﻿using HospitalProject.Domain.Model;
+using HospitalProject.Service.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace HospitalProject.Service.Interface.Repository
         Doctor GetDoctorbyId(int id);
         void Add(Doctor entity);
         void Update(Doctor doctor);
-        void Remove(int id);
-
+        void Remove(Doctor doctor);
+        void Remove(DoctorDto doctor);
     }
 }

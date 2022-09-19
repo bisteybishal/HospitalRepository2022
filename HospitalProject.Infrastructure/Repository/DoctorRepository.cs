@@ -22,27 +22,28 @@ namespace HospitalProject.Infrastructure.Repository
         {
             _dbContext.Doctors.Add(entity);
             _dbContext.SaveChanges();
-         
         }
 
         public IEnumerable<Doctor> GetAllDoctor()
         {
-            throw new NotImplementedException();
+            return _dbContext.Doctors.ToList();
         }
 
         public Doctor GetDoctorbyId(int id)
         {
-            throw new NotImplementedException();
+            return _dbContext.Doctors.Find(id);
         }
 
-        public void Remove(int id)
+        public void Remove(Doctor doctor)
         {
-            throw new NotImplementedException();
+            _dbContext.Remove(doctor);
+            _dbContext.SaveChanges();
         }
 
         public void Update(Doctor doctor)
         {
-            throw new NotImplementedException();
+            _dbContext.Update(doctor);
+            _dbContext.SaveChanges();
         }
     }
 }

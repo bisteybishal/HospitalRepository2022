@@ -1,4 +1,5 @@
 ﻿using HospitalProject.Domain.Model;
+using HospitalProject.Infrastructure.Data;
 using HospitalProject.Service.Interface.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,24 +11,39 @@ namespace HospitalProject.Infrastructure.Repository
 {
     public class BillRepository : IBillRepository
     {
+        private readonly AppDbContext _dbContext;
+
+        public BillRepository(AppDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         public void Add(Bill entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Bills.Add(entity);
+            _dbContext.SaveChanges();
         }
 
-        public Bill GetBillbyId(int id)
+        public IQueryable<Bill> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbContext.Bills.AsQueryable();
         }
 
-        public void Remove(int id)
+        public Bill GetBillbyId(int billId)
         {
-            throw new NotImplementedException();
+           return _dbContext.Bills.Where(x => x.Id == billId).FirstOrDefault();
+        }
+
+        public void Remove(Bill bill)
+        {
+            _dbContext.Bills.Remove(bill);
+            _dbContext.SaveChanges();
         }
 
         public void Update(Bill bill)
         {
-            throw new NotImplementedException();
+            _dbContext.Bills.Update(bill);
+            _dbContext.SaveChanges();
         }
     }
 }

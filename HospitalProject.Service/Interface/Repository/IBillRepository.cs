@@ -9,9 +9,10 @@ namespace HospitalProject.Service.Interface.Repository
 {
     public interface IBillRepository
     {
-       Bill GetBillbyId(int id);
+        IQueryable<Bill> GetAll();
+        Bill GetBillbyId(int billId);
         void Add(Bill entity);
         void Update(Bill bill);
-        void Remove(int id);
+        void Remove(Bill bill);
     }
 }

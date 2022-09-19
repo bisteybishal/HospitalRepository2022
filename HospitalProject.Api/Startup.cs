@@ -1,10 +1,13 @@
 using HospitalProject.Infrastructure.Data;
 using HospitalProject.Infrastructure.Repository;
+using HospitalProject.Service.Implementation.Services;
 using HospitalProject.Service.Interface.Repository;
+using HospitalProject.Service.Interface.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,17 +32,17 @@ namespace HospitalProject.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
-            services.AddDbContext<AppDbContext>(option => option.
-             UseSqlServer(Configuration.GetConnectionString
-             ("DefaultConnection")));
-            services.AddScoped<IpatientRepository, PatientRepository>();
-            services.AddScoped<IDoctorRepository, DoctorRepository>();
-            services.AddScoped<IBillRepository, BillRepository>();
-
-           
-            services.AddSwaggerGen(c =>
+         services.AddControllers();
+         services.AddDbContext<AppDbContext>(option => option.
+         UseSqlServer(Configuration.GetConnectionString
+         ("DefaultConnection")));
+         services.AddScoped<IpatientRepository, PatientRepository>();
+         services.AddScoped<IDoctorRepository, DoctorRepository>();
+         services.AddScoped<IBillRepository, BillRepository>();
+         services.AddScoped<IPatientService, PatientServices>();
+            services.AddScoped<IDoctorService, DoctorService>();
+            services.AddScoped<IBillService, BillService>();
+        services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HospitalProject.Api", Version = "v1" });
             });

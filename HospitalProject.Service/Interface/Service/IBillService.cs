@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace HospitalProject.Service.Interface.Service
 {
-    public interface IDoctorService
+   public interface IBillService
     {
-        IQueryable<DoctorDto> GetAll();
-        Doctor GetDoctor(int Id);
-        void Add(Doctor entity);
-        void Update(DoctorDto doctorDto);
-        void Delete(int id);
+        IQueryable<BillDto> GetAll();
+        BillDto GetBill(int Id);
+        void Add(Bill entity);
+        void Update(BillDto billDto);
+        void Delete(int Id);
     }
 }

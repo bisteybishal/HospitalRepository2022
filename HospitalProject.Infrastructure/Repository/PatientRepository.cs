@@ -25,7 +25,7 @@ namespace HospitalProject.Infrastructure.Repository
              _dbcontext.SaveChanges();
 
         }
-        public IEnumerable<Patient> GetAllPatients()
+        public IEnumerable<Patient> GetAll()
         {
          return _dbcontext.Patients.Include(x=>x.Doctor).Include(x=>x.Room)
                 .ThenInclude(x=>x.RoomNumber);
@@ -36,9 +36,8 @@ namespace HospitalProject.Infrastructure.Repository
             return _dbcontext.Patients.Where(x => x.Id == patientId).FirstOrDefault();
         }
 
-        public void Remove(int id)
+        public void Remove(Patient patient)
         {
-            var patient= _dbcontext.Patients.Where(x=>x.Id==id);
             _dbcontext.Remove(patient);
             _dbcontext.SaveChanges();
         }

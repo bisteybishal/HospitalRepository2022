@@ -11,5 +11,6 @@ namespace HospitalProject.Service.Interface.Service
         Patient GetPatient(int patientId);
         void Add(Patient entity);
         void Update(PatientDto patientDto);
+        void Remove(int Id);
     }
 }

@@ -24,6 +24,12 @@ namespace HospitalProject.Service.Implementation.Services
             _doctorRepository.Add(entity);
         }
 
+        public void Delete(int Id)
+        {
+            var doctor = GetDoctor(Id);
+             _doctorRepository.Remove(doctor);
+        }
+
         public IQueryable<DoctorDto> GetAll()
         {
             var doctors = _doctorRepository.GetAllDoctor();
@@ -35,6 +41,16 @@ namespace HospitalProject.Service.Implementation.Services
         }
 
         public DoctorDto GetDoctor(int Id)
+        {
+            var doctor = _doctorRepository.GetDoctorbyId(Id);
+            return new DoctorDto
+            {
+                Name = doctor.Name,
+                Address = doctor.Address
+            };
+        }
+
+        public void Update(DoctorDto doctorDto)
         {
             throw new NotImplementedException();
         }

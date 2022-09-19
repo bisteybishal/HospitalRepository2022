@@ -27,7 +27,7 @@ namespace HospitalProject.Service.Implementation.Services
 
         public IQueryable<PatientDto> GetAll()
         {
-            var patients = _patientRepository.GetAllPatients();
+            var patients = _patientRepository.GetAll();
             return patients.Select(x => new PatientDto
             {
                
@@ -49,7 +49,31 @@ namespace HospitalProject.Service.Implementation.Services
             try
             {
                 var patient = GetPatient(patientDto.Id);
+                patient.Name = patientDto.Name;
+                patient.Address = patientDto.Address;
+                patient.Age = patientDto.Age;
+                patient.Disease = patientDto.Disease;
+                _patientRepository.Update(patient);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void Remove(int Id)
+        {
+            try
+            {
+                var pat = GetPatient(Id);
+                _patientRepository.Remove(pat);
 
+             }
+            catch
+            {
+                throw;
+            }
+
+            
             }
         }
     }
